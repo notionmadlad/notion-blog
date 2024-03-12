@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import Script from 'next/script'
 import { CONFIG } from "site.config"
 
 class MyDocument extends Document {
@@ -7,11 +6,11 @@ class MyDocument extends Document {
     return (
       <Html lang={CONFIG.lang}>
         <Head>
-          <link rel="icon" href="/madlad.jpg" />
+          <link rel="icon" href="/images/128.png" />
           <link
             rel="apple-touch-icon"
-            sizes="192x192"
-            href="/madlad.jpg"
+            sizes="144x144"
+            href="/images/144.png"
           ></link>
           <link
             rel="alternate"

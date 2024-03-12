@@ -8,33 +8,38 @@
   "theme_color": "#101010",
   "scope": "/",
   "description": "The Madlad Blog - The Notion powered blog made my @notionmadlad",
-  "icons": [
+  "icons": "icons": [
     {
-      "src": "/madlad.jpg",
+      "src": "images/16.png",
       "sizes": "16x16"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/32.png",
       "sizes": "32x32"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/64.png",
       "sizes": "64x64"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/144.png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "images/128.png",
       "sizes": "128x128"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/256.png",
       "sizes": "256x256"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/512.png",
       "sizes": "512x512"
     },
     {
-      "src": "/madlad.jpg",
+      "src": "images/1024.png",
       "sizes": "1024x1024"
     }
   ]

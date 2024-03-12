@@ -1,7 +1,8 @@
 const CACHE_NAME = 'the-madlad-blog-v1';
 const CACHE_URLS = [
-  '/madlad.jpg',
-  'robots.txt'
+  '/images',
+  '/robots.txt',
+  '/sitemap.xml'
 ];
 
 self.addEventListener('install', (event) => {
