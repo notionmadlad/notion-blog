@@ -1,7 +1,7 @@
 const CONFIG = {
   profile: {
     name: "Martin Notion",
-    image: "/images/128.png",
+    image: "/images/512.png",
     role: "Notion Creator",
     bio: "Get your life and business on track with my tips and Notion Templates.",
     email: "martin.nicolai.online@gmail.com",

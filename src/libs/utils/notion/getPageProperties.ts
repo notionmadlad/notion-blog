@@ -14,7 +14,6 @@ async function getPageProperties(
   const properties: any = {}
   for (let i = 0; i < rawProperties.length; i++) {
     const [key, val]: any = rawProperties[i]
-    console.log(key, val);
     properties.id = id
     if (schema[key]?.type && !excludeProperties.includes(schema[key].type)) {
       properties[schema[key].name] = getTextContent(val)

@@ -28,7 +28,8 @@ const PostCard: React.FC<Props> = ({ data }) => {
               src={data.thumbnail}
               fill
               alt={data.title}
-              css={{ objectFit: "cover" }}
+              style={{ objectFit: "cover" }}
+              priority={true}
             />
           </div>
         )}
