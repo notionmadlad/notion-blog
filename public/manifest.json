@@ -1,0 +1,41 @@
+{
+  "name": "The Madlad Blog",
+  "short_name": "Notion Blog",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#101010",
+  "scope": "/",
+  "description": "The Madlad Blog - The Notion powered blog made my @notionmadlad",
+  "icons": [
+    {
+      "src": "/madlad.jpg",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/madlad.jpg",
+      "sizes": "1024x1024"
+    }
+  ]
+}
