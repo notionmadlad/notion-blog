@@ -8,7 +8,7 @@
   "theme_color": "#101010",
   "scope": "/",
   "description": "The Madlad Blog - The Notion powered blog made my @notionmadlad",
-  "icons": "icons": [
+  "icons": [
     {
       "src": "images/16.png",
       "sizes": "16x16"
