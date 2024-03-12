@@ -4,7 +4,7 @@ import { RootLayout } from "src/layouts"
 import { queryClient } from "src/libs/react-query"
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page)
@@ -22,17 +22,19 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <RootLayout>
-          {getLayout(<>
-            <Component {...pageProps} />
-            <Analytics />
-            <SpeedInsights />
-          </>)}
-        </RootLayout>
-      </Hydrate>
-    </QueryClientProvider>
+    <Suspense fallback={<div>Loading...</div>}>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <RootLayout>
+            {getLayout(<>
+              <Component {...pageProps} />
+              <Analytics />
+              <SpeedInsights />
+            </>)}
+          </RootLayout>
+        </Hydrate>
+      </QueryClientProvider>
+    </Suspense>
   )
 }
 
