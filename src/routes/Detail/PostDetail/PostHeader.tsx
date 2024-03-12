@@ -26,6 +26,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
                     alt="profile_photo"
                     width={24}
                     height={24}
+                    priority={true}
                   />
                   <div className="">{data.author[0].name}</div>
                 </div>
