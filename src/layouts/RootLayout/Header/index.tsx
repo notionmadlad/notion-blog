@@ -1,8 +1,9 @@
 import NavBar from "./NavBar"
-import Logo from "./Logo"
+import Title from "./Title"
 import ThemeToggle from "./ThemeToggle"
 import styled from "@emotion/styled"
 import { zIndexes } from "src/styles/zIndexes"
+import Image from "next/image"
 
 type Props = {
   fullWidth: boolean
@@ -12,10 +13,19 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <StyledWrapper>
       <div data-full-width={fullWidth} className="container">
-        <Logo />
+        <div className="logo" css={{ width: "150px" }}>
+          <Image 
+            src="/images/64px"
+            alt="Logo"
+            width={60}
+            height={60}
+            css={{ borderRadius: "50%", border: "2px solid #000" }}
+          />
+        </div>
+        <Title />
         <div className="nav">
-          <ThemeToggle />
           <NavBar />
+          <ThemeToggle />
         </div>
       </div>
     </StyledWrapper>
@@ -39,7 +49,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1120px;
-    height: 3rem;
+    height: 100px;
     margin: 0 auto;
     &[data-full-width="true"] {
       @media (min-width: 768px) {
@@ -51,6 +61,13 @@ const StyledWrapper = styled.div`
       display: flex;
       gap: 0.75rem;
       align-items: center;
+      width: 150px;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        display: none;
+      }
     }
   }
 `

@@ -6,7 +6,7 @@ const CONFIG = {
     bio: "Get your life and business on track with my tips and Notion Templates.",
     email: "martin.nicolai.online@gmail.com",
     linkedin: "martinwriter1",
-    github: "",
+    github: "notionmadlad",
     instagram: "martinwriter_",
     twitter: "notionmadlad"
   },

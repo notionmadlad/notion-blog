@@ -53,7 +53,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             <div className="thumbnail">
               <Image
                 src={data.thumbnail}
-                style={{ objectFit: "cover" }}
+                css={{ objectFit: "cover" }}
                 fill
                 alt={data.title}
                 priority={true}
