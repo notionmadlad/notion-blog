@@ -15,7 +15,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       <div data-full-width={fullWidth} className="container">
         <div className="logo" css={{ width: "150px" }}>
           <Image 
-            src="/images/64px"
+            src="/images/64.png"
             alt="Logo"
             width={60}
             height={60}
