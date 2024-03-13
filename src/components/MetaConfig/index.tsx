@@ -16,7 +16,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <title>{props.title}</title>
       <meta name="robots" content="follow, index" />
       <meta charSet="UTF-8" />
-      <meta name="theme-color" content="101010" />
+      <meta name="theme-color" content="#1c1c1c" />
       <meta name="description" content={props.description || "loading description"} />
       <meta property="og:type" content={props.type} />
       <meta property="og:title" content={props.title} />

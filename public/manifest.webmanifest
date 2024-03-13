@@ -5,7 +5,7 @@
   "id": "/",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#101010",
+  "theme_color": "#1c1c1c",
   "scope": "/",
   "description": "The Madlad Blog - The Notion powered blog made my @notionmadlad",
   "icons": [
@@ -37,6 +37,7 @@
     {
       "src": "images/512.png",
       "sizes": "512x512"
+      "purpose": "maskable"
     },
     {
       "src": "images/1024.png",

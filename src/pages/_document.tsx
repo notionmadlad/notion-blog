@@ -20,7 +20,7 @@ class MyDocument extends Document {
           ></link>
           <link
             rel="manifest"
-            href="/manifest.json"
+            href="/manifest.webmanifest"
           ></link>
           {CONFIG.googleSearchConsole.enable === true && (
             <>
