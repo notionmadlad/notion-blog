@@ -5,7 +5,7 @@
   "id": "/",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#1c1c1c",
+  "theme_color": "#111",
   "scope": "/",
   "description": "The Madlad Blog - The Notion powered blog made my @notionmadlad",
   "icons": [
