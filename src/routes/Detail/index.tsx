@@ -27,4 +27,6 @@ const StyledWrapper = styled.div`
   &[data-type="Paper"] {
     padding: 40px 0;
   }
+
+  > 
 `

@@ -30,10 +30,10 @@ const CategorySelect: React.FC<Props> = () => {
       </div>
       {opened && (
         <div className="content">
-          {Object.keys(data).map((key, idx) => (
+          {Object.keys(data).map((key, i) => (
             <div
               className="item"
-              key={idx}
+              key={i}
               onClick={() => handleOptionClick(key)}
             >
               {`${key} (${data[key]})`}
@@ -80,7 +80,7 @@ const StyledWrapper = styled.div`
       cursor: pointer;
 
       :hover {
-        background-color: ${({ theme }) => theme.colors.gray4};
+        background-color: ${({ theme }) => theme.colors.gray1};
       }
     }
   }
