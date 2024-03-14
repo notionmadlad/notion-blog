@@ -31,6 +31,16 @@ const Feed: React.FC<Props> = () => {
       <div className="mid">
         <MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+        <iframe 
+          src="https://martinnotion.substack.com/embed" 
+          width="100%" 
+          height="150" 
+          css={{
+            border: "1px solid #EEE",
+            background: "white",
+            borderRadius: "1rem"
+          }} 
+        />
         <div className="tags">
           <TagList />
         </div>
