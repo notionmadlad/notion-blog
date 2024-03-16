@@ -37,7 +37,7 @@ const Feed: React.FC<Props> = () => {
           height="150" 
           css={{
             border: "none",
-            background: "white",
+            background: "transparent",
             borderRadius: "1rem"
           }} 
         />
