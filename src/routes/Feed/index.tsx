@@ -1,5 +1,4 @@
 import { useState } from "react"
-import fs from "fs";
 
 import SearchInput from "./SearchInput"
 import { FeedHeader } from "./FeedHeader"
@@ -16,16 +15,8 @@ const HEADER_HEIGHT = 73
 
 type Props = {}
 
-function convert() {
-  const base64EncodedHtml = Buffer.from(fs.readFileSync("./embed.txt")).toString('base64')
-  const dataUrl = `data:text/html;base64,${base64EncodedHtml}`
-
-  return dataUrl;
-}
-
 const Feed: React.FC<Props> = () => {
   const [q, setQ] = useState("")
-  const dataUrl = convert()
 
   return (
     <StyledWrapper>
@@ -41,9 +32,9 @@ const Feed: React.FC<Props> = () => {
         <MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <iframe 
-          src={dataUrl}
+          src="https://martinnotion.substack.com/embed"
           width="100%" 
-          height="150" 
+          height="320" 
           css={{
             border: "none",
             background: "transparent",
