@@ -1,5 +1,5 @@
 import { useState } from "react"
-import fs from "node:fs";
+import fs from "fs";
 
 import SearchInput from "./SearchInput"
 import { FeedHeader } from "./FeedHeader"
