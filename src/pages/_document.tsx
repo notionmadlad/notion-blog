@@ -22,6 +22,7 @@ class MyDocument extends Document {
             rel="manifest"
             href="/manifest.webmanifest"
           ></link>
+          <script async src="https://arc.io/widget.min.js#oFbLYLPW"></script>
           {CONFIG.googleSearchConsole.enable === true && (
             <>
               <meta

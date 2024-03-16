@@ -32,10 +32,11 @@ const Feed: React.FC<Props> = () => {
         <MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <iframe 
-          src="https://martinnotion.substack.com/embed" 
+          src="/embed.html" 
           width="100%" 
           height="150" 
           css={{
+            border: "none",
             background: "white",
             borderRadius: "1rem"
           }} 
