@@ -1,4 +1,5 @@
 import { useState } from "react"
+import fs from "node:fs";
 
 import SearchInput from "./SearchInput"
 import { FeedHeader } from "./FeedHeader"
@@ -10,6 +11,7 @@ import ProfileCard from "./ProfileCard"
 import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
+import convert from "src/lib/convert"
 
 const HEADER_HEIGHT = 73
 
@@ -17,6 +19,7 @@ type Props = {}
 
 const Feed: React.FC<Props> = () => {
   const [q, setQ] = useState("")
+  const dataUrl = convert(fs.readFileSync("./embed.txt"))
 
   return (
     <StyledWrapper>
@@ -32,7 +35,7 @@ const Feed: React.FC<Props> = () => {
         <MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <iframe 
-          src="/embed.html" 
+          src={dataUrl}
           width="100%" 
           height="150" 
           css={{
