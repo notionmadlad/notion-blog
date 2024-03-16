@@ -14,10 +14,10 @@ const ProfileCard: React.FC<Props> = () => {
       </div>
       <div className="content">
         <div className="top">
-          <Image src={CONFIG.profile.image} fill alt="" style={{ borderRadius: "10px" }} priority={true} />
+          <Image src={CONFIG.profile.image} fill alt="" css={{ borderRadius: "10px" }} priority={true} />
         </div>
         <div className="mid">
-          <div className=" name">{CONFIG.profile.name}</div>
+          <div className="name">{CONFIG.profile.name}</div>
           <div className="role">{CONFIG.profile.role}</div>
           <div className="text-sm mb-2">{CONFIG.profile.bio}</div>
         </div>
@@ -62,8 +62,7 @@ const StyledWrapper = styled.div`
       .name {
         font-size: 1.25rem;
         line-height: 1.75rem;
-        font-style: italic;
-        font-weight: 700;
+        font-weight: 900;
       }
       .role {
         margin-bottom: 1rem;

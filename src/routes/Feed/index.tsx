@@ -36,7 +36,6 @@ const Feed: React.FC<Props> = () => {
           width="100%" 
           height="150" 
           css={{
-            border: "1px solid #EEE",
             background: "white",
             borderRadius: "1rem"
           }} 
