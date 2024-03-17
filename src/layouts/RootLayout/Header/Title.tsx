@@ -14,4 +14,5 @@ export default Logo
 
 const StyledWrapper = styled(Link)`
   font-size: 25px;
+  font-weight: 800;
 `
