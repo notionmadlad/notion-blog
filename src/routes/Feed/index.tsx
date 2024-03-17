@@ -10,6 +10,7 @@ import ProfileCard from "./ProfileCard"
 import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
+import NewsletterCard from "./NewsletterCard";
 
 const HEADER_HEIGHT = 73
 
@@ -31,16 +32,6 @@ const Feed: React.FC<Props> = () => {
       <div className="mid">
         <MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
-        <iframe 
-          src="https://martinnotion.substack.com/embed"
-          width="100%" 
-          height="320" 
-          css={{
-            border: "none",
-            background: "transparent",
-            borderRadius: "1rem"
-          }} 
-        />
         <div className="tags">
           <TagList />
         </div>
@@ -56,6 +47,7 @@ const Feed: React.FC<Props> = () => {
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
+        <NewsletterCard />
         <ProfileCard />
         <ServiceCard />
         <ContactCard />
