@@ -16,7 +16,7 @@ const NewsletterCard: React.FC<Props> = () => {
         css={{
           border: "none",
           background: "transparent",
-          borderRadius: "1rem"
+          borderRadius: "5px"
         }} 
       />
     </StyledWrapper>

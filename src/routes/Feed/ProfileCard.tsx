@@ -35,7 +35,7 @@ const StyledWrapper = styled.div`
   }
   > .content {
     margin-bottom: 2.25rem;
-    border-radius: 1rem;
+    border-radius: 5px;
     width: 100%;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray1};

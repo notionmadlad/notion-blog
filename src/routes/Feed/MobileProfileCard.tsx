@@ -48,7 +48,7 @@ const StyledWrapper = styled.div`
   > .mid {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border-radius: 1rem;
+    border-radius: 5px;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray1};
     > .wrapper {

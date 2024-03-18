@@ -30,7 +30,7 @@ const Feed: React.FC<Props> = () => {
         <TagList />
       </div>
       <div className="mid">
-        <MobileProfileCard />
+        {/* <MobileProfileCard /> */}
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tags">
           <TagList />
@@ -41,7 +41,7 @@ const Feed: React.FC<Props> = () => {
           <Footer />
         </div>
       </div>
-      <div
+      {/* <div
         className="rt"
         css={{
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
@@ -54,7 +54,7 @@ const Feed: React.FC<Props> = () => {
         <div className="footer">
           <Footer />
         </div>
-      </div>
+      </div> */}
     </StyledWrapper>
   )
 }
@@ -62,7 +62,7 @@ const Feed: React.FC<Props> = () => {
 export default Feed
 
 const StyledWrapper = styled.div`
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(11, minmax(0, 1fr));
 
   padding: 2rem 0;
   display: grid;
@@ -108,9 +108,6 @@ const StyledWrapper = styled.div`
 
     > .footer {
       padding-bottom: 2rem;
-      @media (min-width: 1024px) {
-        display: none;
-      }
     }
   }
 

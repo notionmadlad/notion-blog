@@ -118,7 +118,7 @@ const StyledWrapper = styled.div`
       overflow: hidden;
       position: relative;
       margin-bottom: 1.75rem;
-      border-radius: 1.5rem;
+      border-radius: 5px;
       width: 100%;
       background-color: ${({ theme }) => theme.colors.gray4};
       padding-bottom: 66%;
