@@ -5,6 +5,7 @@ const CONFIG = {
     role: "Notion Creator",
     bio: "Get your life and business on track with my tips and Notion Templates.",
     email: "martin.nicolai.online@gmail.com",
+    copyright: "Notion Madlad",
     linkedin: "martinwriter1",
     github: "notionmadlad",
     instagram: "martinwriter_",
