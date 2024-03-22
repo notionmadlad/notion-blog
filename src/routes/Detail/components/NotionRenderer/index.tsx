@@ -8,6 +8,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import "katex/dist/katex.min.css"
 import { FC } from "react"
 import styled from "@emotion/styled"
+import { poppins } from "src/assets"
 
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),
@@ -77,7 +78,6 @@ const StyledWrapper = styled.div`
   }
   .notion-page {
     padding: 0;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      Liberation Mono, Courier New, monospace !important;
+    font-family: ${poppins.style.fontFamily} !important;
   }
 `
