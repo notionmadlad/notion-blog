@@ -3,11 +3,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { ExtendedRecordMap } from "notion-types"
 import useScheme from "src/hooks/useScheme"
-import "./style.css"
+import "react-notion-x/src/styles.css"
 import "prismjs/themes/prism-tomorrow.css"
 import "katex/dist/katex.min.css"
 import { FC } from "react"
 import styled from "@emotion/styled"
+import { poppins } from "src/assets"
 
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),
@@ -77,5 +78,6 @@ const StyledWrapper = styled.div`
   }
   .notion-page {
     padding: 0;
+    font-family: ${poppins.style.fontFamily} !important;
   }
 `
