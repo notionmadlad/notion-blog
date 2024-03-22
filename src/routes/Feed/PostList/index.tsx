@@ -50,7 +50,9 @@ const PostList: React.FC<Props> = ({ q }) => {
     <>
       <div className="my-2">
         {!filteredPosts.length && (
-          <p className="text-gray-500 dark:text-gray-300">Nothing to see here.</p>
+          <p className="text-gray-500 dark:text-gray-300">
+            Nothing to see here.
+          </p>
         )}
         {filteredPosts.map((post) => (
           <PostCard key={post.id} data={post} />

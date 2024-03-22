@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import Link from "next/link";
+import Link from "next/link"
 import React from "react"
 
 type Props = {}
@@ -7,8 +7,13 @@ type Props = {}
 const Footer: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <Link className="a-link" href="/">← Back</Link>
-      <p className="a-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      <Link className="a-link" href="/">
+        ← Back
+      </Link>
+      <p
+        className="a-link"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         ↑ Top
       </p>
     </StyledWrapper>

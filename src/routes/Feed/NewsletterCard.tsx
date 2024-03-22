@@ -6,18 +6,16 @@ type Props = {}
 const NewsletterCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">
-        Newsletter
-      </div>
-      <iframe 
+      <div className="title">Newsletter</div>
+      <iframe
         src="https://martinnotion.substack.com/embed"
-        width="100%" 
-        height="150" 
+        width="100%"
+        height="150"
         css={{
           border: "none",
           background: "transparent",
-          borderRadius: "5px"
-        }} 
+          borderRadius: "5px",
+        }}
       />
     </StyledWrapper>
   )

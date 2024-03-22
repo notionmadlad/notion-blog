@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 import React from "react"
-import { Emoji } from "src/components/Emoji"
 import useScheme from "src/hooks/useScheme"
 import { FaMoon, FaSun } from "react-icons/fa"
 

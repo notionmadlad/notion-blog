@@ -18,10 +18,7 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
-          <link
-            rel="manifest"
-            href="/manifest.webmanifest"
-          ></link>
+          <link rel="manifest" href="/manifest.webmanifest"></link>
           <script async src="https://arc.io/widget.min.js#oFbLYLPW"></script>
           {CONFIG.googleSearchConsole.enable === true && (
             <>

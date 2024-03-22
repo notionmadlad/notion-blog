@@ -2,19 +2,22 @@ import styled from "@emotion/styled"
 import Image from "next/image"
 import React from "react"
 import { CONFIG } from "site.config"
-import { Emoji } from "src/components/Emoji"
 
 type Props = {}
 
 const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">
-        Profile
-      </div>
+      <div className="title">Profile</div>
       <div className="content">
         <div className="top">
-          <Image src={CONFIG.profile.image} fill alt="" css={{ borderRadius: "10px" }} priority={true} />
+          <Image
+            src={CONFIG.profile.image}
+            fill
+            alt=""
+            css={{ borderRadius: "10px" }}
+            priority={true}
+          />
         </div>
         <div className="mid">
           <div className="name">{CONFIG.profile.name}</div>

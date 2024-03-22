@@ -10,7 +10,7 @@ import ProfileCard from "./ProfileCard"
 import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
-import NewsletterCard from "./NewsletterCard";
+import NewsletterCard from "./NewsletterCard"
 
 const HEADER_HEIGHT = 73
 

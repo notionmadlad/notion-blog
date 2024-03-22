@@ -13,7 +13,8 @@ export const Global = () => {
           padding: 0;
           color: ${theme.colors.gray12};
           background-color: ${theme.colors.gray2};
-          font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            Liberation Mono, Courier New, monospace;
         }
 
         * {

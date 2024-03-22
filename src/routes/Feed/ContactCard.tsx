@@ -8,14 +8,11 @@ import {
 } from "react-icons/ai"
 import { RiTwitterXLine } from "react-icons/ri"
 import { CONFIG } from "site.config"
-import { Emoji } from "src/components/Emoji"
 
 const ContactCard: React.FC = () => {
   return (
     <>
-      <StyledTitle>
-        Contact
-      </StyledTitle>
+      <StyledTitle>Contact</StyledTitle>
       <StyledWrapper>
         {CONFIG.profile.twitter && (
           <a

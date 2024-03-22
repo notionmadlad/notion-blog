@@ -82,7 +82,7 @@ const StyledWrapper = styled.div`
       gap: 15px;
       white-space: nowrap;
       cursor: pointer;
-      
+
       :hover {
         background-color: ${({ theme }) => theme.colors.gray1};
       }

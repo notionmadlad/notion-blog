@@ -9,19 +9,19 @@ const CONFIG = {
     linkedin: "martinwriter1",
     github: "notionmadlad",
     instagram: "martinwriter_",
-    twitter: "notionmadlad"
+    twitter: "notionmadlad",
   },
   links: [
-    { 
-      id: 1, 
-      name: "About", 
-      to: "/about" 
+    {
+      id: 1,
+      name: "About",
+      to: "/about",
     },
     {
       id: 2,
       name: "Store",
-      to: "/store"
-    }
+      to: "/store",
+    },
   ],
   projects: [
     {
@@ -31,7 +31,8 @@ const CONFIG = {
   ],
   blog: {
     title: "The Madlad Blog",
-    description: "The Madlad Blog - The Notion powered blog made my @notionmadlad",
+    description:
+      "The Madlad Blog - The Notion powered blog made my @notionmadlad",
   },
 
   link: "https://blog.madlad.store",

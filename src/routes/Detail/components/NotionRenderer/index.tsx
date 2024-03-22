@@ -15,7 +15,7 @@ const _NotionRenderer = dynamic(
 )
 
 const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then(async (m) =>  m.Code )
+  import("react-notion-x/build/third-party/code").then(async (m) => m.Code)
 )
 
 const Collection = dynamic(() =>
@@ -77,6 +77,7 @@ const StyledWrapper = styled.div`
   }
   .notion-page {
     padding: 0;
-    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace !important;
   }
 `

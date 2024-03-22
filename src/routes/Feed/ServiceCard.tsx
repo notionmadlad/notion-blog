@@ -1,16 +1,13 @@
 import { CONFIG } from "site.config"
 import React from "react"
-import { BsFillBoxSeamFill } from "react-icons/bs";
+import { BsFillBoxSeamFill } from "react-icons/bs"
 import styled from "@emotion/styled"
-import { Emoji } from "src/components/Emoji"
 
 const ServiceCard: React.FC = () => {
   if (!CONFIG.projects) return null
   return (
     <>
-      <StyledTitle>
-        Service
-      </StyledTitle>
+      <StyledTitle>Service</StyledTitle>
       <StyledWrapper>
         {CONFIG.projects.map((project, idx) => (
           <a

@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 import { useRouter } from "next/router"
 import React from "react"
-import { Emoji } from "src/components/Emoji"
 import { useTagsQuery } from "src/hooks/useTagsQuery"
 
 type Props = {}
@@ -19,8 +18,7 @@ const TagList: React.FC<Props> = () => {
           tag: undefined,
         },
       })
-    }
-    else {
+    } else {
       router.push({
         query: {
           ...router.query,
@@ -32,9 +30,7 @@ const TagList: React.FC<Props> = () => {
 
   return (
     <StyledWrapper>
-      <div className="top">
-        Tags
-      </div>
+      <div className="top">Tags</div>
       <div className="list">
         {Object.keys(data).map((key) => (
           <a
