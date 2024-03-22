@@ -22,7 +22,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             <Category>{category}</Category>
           </div>
         )}
-        {data.thumbnail && (
+        {/* {data.thumbnail && (
           <div className="thumbnail">
             <Image
               src={data.thumbnail}
@@ -32,8 +32,8 @@ const PostCard: React.FC<Props> = ({ data }) => {
               priority={true}
             />
           </div>
-        )}
-        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
+        )} */}
+        <div data-thumb={false} data-category={!!category} className="content">
           <header className="top">
             <h2>{data.title}</h2>
           </header>
@@ -66,26 +66,13 @@ const StyledWrapper = styled(Link)`
   article {
     overflow: hidden;
     position: relative;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    background-color: ${({ theme }) =>
-      theme.scheme === "light" ? "white" : theme.colors.gray1};
-    transition-property: box-shadow;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;
     }
-
-    :hover {
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
     > .category {
       position: absolute;
       top: 1rem;
-      left: 1rem;
       z-index: 10;
     }
 
@@ -100,8 +87,6 @@ const StyledWrapper = styled(Link)`
       }
     }
     > .content {
-      padding: 1rem;
-
       &[data-thumb="false"] {
         padding-top: 3.5rem;
       }

@@ -36,7 +36,8 @@ const CategorySelect: React.FC<Props> = () => {
               key={i}
               onClick={() => handleOptionClick(key)}
             >
-              {`${key} (${data[key]})`}
+              <div>{key}</div>
+              <div>{data[key]}</div>
             </div>
           ))}
         </div>
@@ -76,9 +77,12 @@ const StyledWrapper = styled.div`
       border-radius: 5px;
       font-size: 0.875rem;
       line-height: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
       white-space: nowrap;
       cursor: pointer;
-
+      
       :hover {
         background-color: ${({ theme }) => theme.colors.gray1};
       }

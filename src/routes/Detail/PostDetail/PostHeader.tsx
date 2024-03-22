@@ -49,7 +49,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
               </div>
             )}
           </div>
-          {data.thumbnail && (
+          {/* {data.thumbnail && (
             <div className="thumbnail">
               <Image
                 src={data.thumbnail}
@@ -59,7 +59,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
                 priority={true}
               />
             </div>
-          )}
+          )} */}
         </nav>
       )}
     </StyledWrapper>
