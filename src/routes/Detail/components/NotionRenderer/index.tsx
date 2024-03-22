@@ -78,6 +78,6 @@ const StyledWrapper = styled.div`
   }
   .notion-page {
     padding: 0;
-    font-family: ${poppins.style.fontFamily} !important;
+    --notion-font: ${poppins.style.fontFamily};
   }
 `
