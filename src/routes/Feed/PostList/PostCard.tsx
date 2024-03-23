@@ -67,11 +67,8 @@ const StyledWrapper = styled(Link)`
     overflow: hidden;
     position: relative;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
-
-    :last-child {
-      border-bottom: none;
-    }
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;
@@ -154,5 +151,9 @@ const StyledWrapper = styled(Link)`
         gap: 0.5rem;
       }
     }
+  }
+
+  :last-child > article {
+    border-bottom: none;
   }
 `
