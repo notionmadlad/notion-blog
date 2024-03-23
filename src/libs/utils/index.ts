@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic"
+
 export function formatDate(date: any, local: any) {
   const d = new Date(date)
   const options: any = { year: "numeric", month: "short", day: "numeric" }
@@ -5,14 +7,14 @@ export function formatDate(date: any, local: any) {
   return res
 }
 
-export async function getIcon(str: string) {
+export function getIcon(str: string) {
   const regex = /\{(.+?)#(.+?)\}(.+)/;
   const matches = str.match(regex);
 
   if (matches) {
-    const ReactIcons = await import(`node_modules/react-icons/${matches[1]}`);
+    const ReactIcon = dynamic(() => import(`react-icons/${matches[1]}`).then(m => m[matches[2]]));
     const result = {
-      icon: ReactIcons[matches[2]],
+      icon: ReactIcon,
       string: matches[3]
     };
     return result;
