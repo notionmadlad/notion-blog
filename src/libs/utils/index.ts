@@ -10,7 +10,7 @@ export async function getIcon(str: string) {
   const matches = str.match(regex);
 
   if (matches) {
-    const ReactIcons = await import(`react-icons/${matches[1]}`);
+    const ReactIcons = await import(`node_modules/react-icons/${matches[1]}`);
     const result = {
       icon: ReactIcons[matches[2]],
       string: matches[3]
