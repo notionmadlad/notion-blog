@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic"
+import("react-icons")
 
 export function formatDate(date: any, local: any) {
   const d = new Date(date)
@@ -12,7 +13,7 @@ export function getIcon(str: string) {
   const matches = str.match(regex);
 
   if (matches) {
-    const ReactIcon = dynamic(() => import(`react-icons/${matches[1]}`).then(m => m[matches[2]]));
+    const ReactIcon = import(`react-icons/${matches[1]}`).then(m => m[matches[2]]);
     const result = {
       icon: ReactIcon,
       string: matches[3]
