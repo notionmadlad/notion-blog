@@ -5,19 +5,21 @@ export function formatDate(date: any, local: any) {
   return res
 }
 
-export function getIcon(str: string) {
-  const regex = /\{(.+?)#(.+?)\}(.+)/
-  const matches = str.match(regex)
+export async function getIcon(str: string) {
+  const regex = /\{(.+?)#(.+?)\}(.+)/;
+  const matches = str.match(regex);
 
   if (matches) {
-    return import(`react-icons/${matches[1]}`).then((ReactIcons) => ({
+    const ReactIcons = await import(`react-icons/${matches[1]}`);
+    const result = {
       icon: ReactIcons[matches[2]],
-      string: matches[3],
-    }))
+      string: matches[3]
+    };
+    return result;
   } else {
     return {
       icon: null,
-      string: str,
-    }
+      string: str
+    };
   }
 }
