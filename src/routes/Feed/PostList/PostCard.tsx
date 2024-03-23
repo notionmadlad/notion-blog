@@ -66,13 +66,20 @@ const StyledWrapper = styled(Link)`
   article {
     overflow: hidden;
     position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
+
+    :last-child {
+      border-bottom: none;
+    }
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;
+      padding-bottom: 2rem;
     }
     > .category {
       position: absolute;
-      top: 1rem;
+      top: 0;
       z-index: 10;
     }
 
@@ -88,7 +95,7 @@ const StyledWrapper = styled(Link)`
     }
     > .content {
       &[data-thumb="false"] {
-        padding-top: 3.5rem;
+        padding-top: 2.5rem;
       }
       &[data-category="false"] {
         padding-top: 1.5rem;
