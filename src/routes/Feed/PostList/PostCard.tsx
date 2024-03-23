@@ -62,15 +62,16 @@ const PostCard: React.FC<Props> = ({ data }) => {
 export default PostCard
 
 const StyledWrapper = styled(Link)`
+  :last-child > article {
+    border-bottom: none;
+  }
+  
   article {
     overflow: hidden;
     position: relative;
+    margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
-
-    :last-child {
-      border-bottom: none;
-    }
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;
