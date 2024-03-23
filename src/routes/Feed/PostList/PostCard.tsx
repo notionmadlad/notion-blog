@@ -6,7 +6,6 @@ import { TPost } from "../../../types"
 import Image from "next/image"
 import Category from "../../../components/Category"
 import styled from "@emotion/styled"
-import { getIcon } from "src/libs/utils";
 
 type Props = {
   data: TPost
@@ -14,13 +13,12 @@ type Props = {
 
 const PostCard: React.FC<Props> = ({ data }) => {
   const category = (data.category && data.category?.[0]) || undefined
-  const parsedCategory: any = category && getIcon(category);
   return (
     <StyledWrapper href={`/${data.slug}`}>
       <article>
         {category && (
           <div className="category">
-            <Category icon={parsedCategory?.icon}>{parsedCategory?.string}</Category>
+            <Category>{category}</Category>
           </div>
         )}
         {/* {data.thumbnail && (
