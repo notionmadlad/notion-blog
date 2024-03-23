@@ -20,7 +20,7 @@ const CONFIG = {
     {
       id: 2,
       name: "Store",
-      to: "/store",
+      to: "https://gumroad.madlad.store",
     },
   ],
   projects: [

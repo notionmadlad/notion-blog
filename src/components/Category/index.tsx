@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import React from "react"
+import React, { ReactNode } from "react"
 import { COLOR_SET } from "./constants"
 import styled from "@emotion/styled"
 import { colors } from "src/styles"
@@ -19,10 +19,11 @@ export const getColorClassByName = (name: string): string => {
 
 type Props = {
   children: string
+  icon: any
   readOnly?: boolean
 }
 
-const Category: React.FC<Props> = ({ readOnly = false, children }) => {
+const Category: React.FC<Props> = ({ readOnly = false, children, icon }) => {
   const router = useRouter()
 
   const handleClick = (value: string) => {
@@ -37,7 +38,7 @@ const Category: React.FC<Props> = ({ readOnly = false, children }) => {
         cursor: readOnly ? "default" : "pointer",
       }}
     >
-      {children}
+      {icon && icon}{children}
     </StyledWrapper>
   )
 }

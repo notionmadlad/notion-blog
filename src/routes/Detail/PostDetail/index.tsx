@@ -6,6 +6,7 @@ import Category from "src/components/Category"
 import styled from "@emotion/styled"
 import NotionRenderer from "../components/NotionRenderer"
 import usePostQuery from "src/hooks/usePostQuery"
+import { getIcon } from "src/libs/utils"
 
 type Props = {}
 
@@ -15,14 +16,14 @@ const PostDetail: React.FC<Props> = () => {
   if (!data) return null
 
   const category = (data.category && data.category?.[0]) || undefined
-
+  const parsedCategory: any = category && getIcon(category)
   return (
     <StyledWrapper>
       <article>
         {category && (
           <div css={{ marginBottom: "0.5rem" }}>
-            <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
-              {category}
+            <Category icon={parsedCategory?.icon} readOnly={data.status?.[0] === "PublicOnDetail"}>
+              {parsedCategory?.str}
             </Category>
           </div>
         )}

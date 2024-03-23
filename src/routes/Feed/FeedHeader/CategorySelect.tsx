@@ -5,6 +5,7 @@ import { MdExpandMore } from "react-icons/md"
 import { DEFAULT_CATEGORY } from "src/constants"
 import styled from "@emotion/styled"
 import { useCategoriesQuery } from "src/hooks/useCategoriesQuery"
+import { getIcon } from "src/libs/utils"
 
 type Props = {}
 
@@ -13,7 +14,7 @@ const CategorySelect: React.FC<Props> = () => {
   const data = useCategoriesQuery()
   const [dropdownRef, opened, handleOpen] = useDropdown()
 
-  const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
+  const currentCategory = getIcon(`${router.query.category || ``}` || DEFAULT_CATEGORY)
 
   const handleOptionClick = (category: string) => {
     router.push({
@@ -26,7 +27,7 @@ const CategorySelect: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <div ref={dropdownRef} className="wrapper" onClick={handleOpen}>
-        {currentCategory} Posts <MdExpandMore />
+        {currentCategory.str} Posts <MdExpandMore />
       </div>
       {opened && (
         <div className="content">

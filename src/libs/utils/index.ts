@@ -4,3 +4,22 @@ export function formatDate(date: any, local: any) {
   const res = d.toLocaleDateString(local, options)
   return res
 }
+
+export async function getIcon(str: string) {
+  const regex = /\{(.+?)#(.+?)\}(.+)/;
+  const matches = str.match(regex);
+
+  if (matches) {
+    const ReactIcons = await import(`react-icons/${matches[1]}`);
+    const result = {
+      icon: ReactIcons[matches[2]],
+      string: matches[3]
+    };
+    return result;
+  } else {
+    return {
+      icon: null,
+      string: str
+    };
+  }
+}
