@@ -20,7 +20,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <article>
         {category && (
           <div className="category">
-            <Category icon={category.icon}>{category.str}</Category>
+            <Category icon={parsedCategory?.icon}>{parsedCategory?.string}</Category>
           </div>
         )}
         {/* {data.thumbnail && (

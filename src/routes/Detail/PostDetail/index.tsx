@@ -23,7 +23,7 @@ const PostDetail: React.FC<Props> = () => {
         {category && (
           <div css={{ marginBottom: "0.5rem" }}>
             <Category icon={parsedCategory?.icon} readOnly={data.status?.[0] === "PublicOnDetail"}>
-              {parsedCategory?.str}
+              {parsedCategory?.string}
             </Category>
           </div>
         )}

@@ -14,7 +14,7 @@ const CategorySelect: React.FC<Props> = () => {
   const data = useCategoriesQuery()
   const [dropdownRef, opened, handleOpen] = useDropdown()
 
-  const currentCategory = getIcon(`${router.query.category || ``}` || DEFAULT_CATEGORY)
+  const currentCategory: any = getIcon(`${router.query.category || ``}` || DEFAULT_CATEGORY)
 
   const handleOptionClick = (category: string) => {
     router.push({
@@ -27,7 +27,7 @@ const CategorySelect: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <div ref={dropdownRef} className="wrapper" onClick={handleOpen}>
-        {currentCategory.str} Posts <MdExpandMore />
+        {currentCategory?.string} Posts <MdExpandMore />
       </div>
       {opened && (
         <div className="content">
