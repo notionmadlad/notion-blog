@@ -2,7 +2,6 @@ import { Feed } from "feed"
 import React from "react"
 import ReactDOMServer from "react-dom/server"
 import { CONFIG } from "../../site.config"
-import usePostsQuery from "../hooks/usePostsQuery"
 import NotionRenderer from "../routes/Detail/components/NotionRenderer"
 
 async function createFeedContent(post: any) {
@@ -14,8 +13,7 @@ async function createFeedContent(post: any) {
   return content.replace(regexExp, '')
 }
 
-export async function generateRSS() {
-  const posts = usePostsQuery()
+export async function generateRSS(posts: any) {
   const year = new Date().getFullYear()
   const feed = new Feed({
     title: CONFIG.blog.title,
@@ -31,7 +29,7 @@ export async function generateRSS() {
       link: CONFIG.link
     }
   })
-  for (const post of posts) {
+  posts.forEach(post => {
     feed.addItem({
       title: post.title,
       id: `${CONFIG.link}/${post.slug}`,
@@ -40,6 +38,6 @@ export async function generateRSS() {
       content: await createFeedContent(post),
       date: new Date(post?.date?.start_date || post.createdTime)
     })
-  }
+  })
   return feed.atom1()
 }
