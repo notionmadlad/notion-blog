@@ -25,7 +25,7 @@ export async function generateRSS() {
     id: CONFIG.link,
     link: CONFIG.link,
     language: CONFIG.lang,
-    favicon: CONFIG.image,
+    favicon: CONFIG.profile.image,
     copyright: `© ${CONFIG.profile.copyright} ${CONFIG.since === year || !CONFIG.since ? year : `${CONFIG.since} - ${year}`}`,
     author: {
       name: CONFIG.profile.name,
