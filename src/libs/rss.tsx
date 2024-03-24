@@ -33,7 +33,7 @@ export async function generateRSS() {
       link: CONFIG.link
     }
   })
-  posts.forEach(post => {
+  posts.forEach(async post => {
     feed.addItem({
       title: post.title,
       id: `${CONFIG.link}/${post.slug}`,
