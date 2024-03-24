@@ -24,8 +24,8 @@ export async function generateRSS() {
     description: CONFIG.blog.description,
     id: CONFIG.link,
     link: CONFIG.link,
-    language: "en",
-    favicon: `${CONFIG.link}/images/512.png`,
+    language: CONFIG.lang,
+    favicon: CONFIG.image,
     copyright: `© ${CONFIG.profile.copyright} ${CONFIG.since === year || !CONFIG.since ? year : `${CONFIG.since} - ${year}`}`,
     author: {
       name: CONFIG.profile.name,
@@ -33,7 +33,7 @@ export async function generateRSS() {
       link: CONFIG.link
     }
   })
-  posts.forEach(async post => {
+  for (const post of posts) {
     feed.addItem({
       title: post.title,
       id: `${CONFIG.link}/${post.slug}`,
@@ -42,6 +42,6 @@ export async function generateRSS() {
       content: await createFeedContent(post),
       date: new Date(post?.date?.start_date || post.createdTime)
     })
-  })
+  }
   return feed.atom1()
 }

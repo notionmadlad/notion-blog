@@ -19,23 +19,7 @@ class MyDocument extends Document {
             href="/feed"
           ></link>
           <link rel="manifest" href="/manifest.webmanifest"></link>
-          <script async src="https://arc.io/widget.min.js#oFbLYLPW"></script>
-          {CONFIG.googleSearchConsole.enable === true && (
-            <>
-              <meta
-                name="google-site-verification"
-                content={CONFIG.googleSearchConsole.config.siteVerification}
-              />
-            </>
-          )}
-          {CONFIG.naverSearchAdvisor.enable === true && (
-            <>
-              <meta
-                name="naver-site-verification"
-                content={CONFIG.naverSearchAdvisor.config.siteVerification}
-              />
-            </>
-          )}
+          <script async={true} src="https://arc.io/widget.min.js#vpckjHce"></script>
         </Head>
         <body>
           <Main />
