@@ -7,7 +7,7 @@ import getPageProperties from "src/libs/utils/notion/getPageProperties"
 import { TPosts } from "src/types"
 
 export const getPosts = async () => {
-  let id = CONFIG.notionConfig.pageId as string
+  let id = CONFIG.notionPage as string
   const api = new NotionAPI()
 
   const response = await api.getPage(id)

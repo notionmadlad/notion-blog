@@ -3,8 +3,6 @@ import { ThemeProvider } from "./ThemeProvider"
 import useScheme from "src/hooks/useScheme"
 import Header from "./Header"
 import styled from "@emotion/styled"
-import Scripts from "src/layouts/RootLayout/Scripts"
-import useGtagEffect from "./useGtagEffect"
 import Prism from "prismjs/prism"
 import "prismjs/components/prism-markup-templating.js"
 import "prismjs/components/prism-markup.js"
@@ -46,15 +44,12 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => {
   const [scheme] = useScheme()
-  useGtagEffect()
   useEffect(() => {
     Prism.highlightAll()
   }, [])
 
   return (
     <ThemeProvider scheme={scheme}>
-      <Scripts />
-      {/* {metaConfig.type !== "Paper" && <Header />} */}
       <Header fullWidth={false} />
       <StyledMain>{children}</StyledMain>
     </ThemeProvider>

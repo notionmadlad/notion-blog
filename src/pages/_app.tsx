@@ -4,6 +4,7 @@ import { RootLayout } from "src/layouts"
 import { queryClient } from "src/libs/react-query"
 import { useEffect } from "react"
 import dynamic from "next/dynamic"
+
 const Analytics = dynamic(() => import("@vercel/analytics/react").then((m) => m.Analytics), { ssr: false })
 const SpeedInsights = dynamic(() => import("@vercel/speed-insights/next").then((m) => m.SpeedInsights), { ssr: false })
 
@@ -30,13 +31,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <RootLayout>
-          {getLayout(
-            <>
-              <Component {...pageProps} />
-              <Analytics />
-              <SpeedInsights />
-            </>
-          )}
+          {getLayout(<Component {...pageProps} />)}
+          <Analytics />
+          <SpeedInsights />
         </RootLayout>
       </Hydrate>
     </QueryClientProvider>
