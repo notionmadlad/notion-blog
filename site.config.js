@@ -1,4 +1,4 @@
-const CONFIG = {
+const config = {
   blog: {
     title: "The Madlad Blog",
     description:
@@ -28,4 +28,4 @@ const CONFIG = {
   revalidateTime: 60,
 }
 
-module.exports = { CONFIG }
+module.exports = config

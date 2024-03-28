@@ -1,7 +1,7 @@
 import { Feed } from "feed"
 import React from "react"
 import ReactDOMServer from "react-dom/server"
-import { CONFIG } from "../../site.config"
+import config from "../../site.config"
 import NotionRenderer from "../routes/Detail/components/NotionRenderer"
 import { getPosts } from "../apis/notion-client/getPosts"
 import { getRecordMap } from "../apis/notion-client/getRecordMap"
@@ -20,24 +20,24 @@ export async function generateRSS() {
   const posts = await getPosts()
   const year = new Date().getFullYear()
   const feed = new Feed({
-    title: CONFIG.blog.title,
-    description: CONFIG.blog.description,
-    id: CONFIG.link,
-    link: CONFIG.link,
-    language: CONFIG.lang,
-    favicon: CONFIG.profile.image,
-    copyright: `© ${CONFIG.profile.name} ${CONFIG.since === year || !CONFIG.since ? year : `${CONFIG.since} - ${year}`}`,
+    title: config.blog.title,
+    description: config.blog.description,
+    id: config.link,
+    link: config.link,
+    language: config.lang,
+    favicon: config.profile.image,
+    copyright: `© ${config.profile.name} ${config.since === year || !config.since ? year : `${config.since} - ${year}`}`,
     author: {
-      name: CONFIG.profile.name,
-      email: CONFIG.profile.email,
-      link: CONFIG.link
+      name: config.profile.name,
+      email: config.profile.email,
+      link: config.link
     }
   })
   for (const post of posts) {
     feed.addItem({
       title: post.title,
-      id: `${CONFIG.link}/${post.slug}`,
-      link: `${CONFIG.link}/${post.slug}`,
+      id: `${config.link}/${post.slug}`,
+      link: `${config.link}/${post.slug}`,
       description: post.summary,
       content: await createFeedContent(post),
       date: new Date(post?.date?.start_date || post.createdTime)

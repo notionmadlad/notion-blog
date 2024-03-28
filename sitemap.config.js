@@ -1,7 +1,7 @@
-const { CONFIG } = require("./site.config")
+const config = require("./site.config")
 
 module.exports = {
-  siteUrl: CONFIG.link,
+  siteUrl: config.link,
   generateRobotsTxt: true,
   sitemapSize: 7000,
   generateIndexSitemap: false,

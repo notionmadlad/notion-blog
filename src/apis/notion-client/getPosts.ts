@@ -1,4 +1,4 @@
-import { CONFIG } from "site.config"
+import config from "site.config"
 import { NotionAPI } from "notion-client"
 import { idToUuid } from "notion-utils"
 
@@ -7,7 +7,7 @@ import getPageProperties from "src/libs/utils/notion/getPageProperties"
 import { TPosts } from "src/types"
 
 export const getPosts = async () => {
-  let id = CONFIG.notionPage as string
+  let id = config.notionPage as string
   const api = new NotionAPI()
 
   const response = await api.getPage(id)

@@ -1,10 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import { CONFIG } from "site.config"
+import config from "site.config"
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang={CONFIG.lang}>
+      <Html lang={config.lang}>
         <Head>
           <link rel="icon" href="/images/128.png" />
           <link

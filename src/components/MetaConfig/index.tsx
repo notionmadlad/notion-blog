@@ -1,4 +1,4 @@
-import { CONFIG } from "site.config"
+import config from "site.config"
 import Head from "next/head"
 
 export type MetaConfigProps = {
@@ -25,7 +25,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta property="og:title" content={props.title} />
       <meta property="og:description" content={props.description} />
       <meta property="og:url" content={props.url} />
-      {CONFIG.lang && <meta property="og:locale" content={CONFIG.lang} />}
+      {config.lang && <meta property="og:locale" content={config.lang} />}
       {props.image && <meta property="og:image" content={props.image} />}
       <meta name="twitter:title" content={props.title} />
       <meta name="twitter:description" content={props.description} />
@@ -34,7 +34,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       {props.type === "Post" && (
         <>
           <meta property="article:published_time" content={props.date} />
-          <meta property="article:author" content={CONFIG.profile.name} />
+          <meta property="article:author" content={config.profile.name} />
         </>
       )}
     </Head>

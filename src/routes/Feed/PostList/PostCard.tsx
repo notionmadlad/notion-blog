@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CONFIG } from "site.config"
+import config from "site.config"
 import { formatDate } from "src/libs/utils"
 import Tag from "../../../components/Tag"
 import { TPost } from "../../../types"
@@ -29,7 +29,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             <div className="content">
               {formatDate(
                 data?.date?.start_date || data.createdTime,
-                CONFIG.lang
+                config.lang
               )}
             </div>
           </div>

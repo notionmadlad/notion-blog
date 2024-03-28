@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { CONFIG } from "site.config"
+import config from "site.config"
 import styled from "@emotion/styled"
 
 const Logo = () => {
   return (
-    <StyledWrapper href="/" aria-label={CONFIG.blog.title}>
-      {CONFIG.blog.title}
+    <StyledWrapper href="/" aria-label={config.blog.title}>
+      {config.blog.title}
     </StyledWrapper>
   )
 }

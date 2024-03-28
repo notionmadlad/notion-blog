@@ -1,15 +1,15 @@
 import Detail from "src/routes/Detail"
-import { filterPosts } from "src/libs/utils/notion"
-import { CONFIG } from "site.config"
-import { NextPageWithLayout } from "../types"
 import CustomError from "src/routes/Error"
-import { getRecordMap, getPosts } from "src/apis"
 import MetaConfig from "src/components/MetaConfig"
+import usePostQuery from "src/hooks/usePostQuery"
+import { filterPosts } from "src/libs/utils/notion"
+import config from "site.config"
+import { NextPageWithLayout } from "../types"
 import { GetStaticProps } from "next"
 import { queryClient } from "src/libs/react-query"
 import { queryKey } from "src/constants/queryKey"
 import { dehydrate } from "@tanstack/react-query"
-import usePostQuery from "src/hooks/usePostQuery"
+import { getRecordMap, getPosts } from "src/apis"
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts"
 
 const filter: FilterPostsOptions = {
@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: CONFIG.revalidateTime,
+    revalidate: config.revalidateTime,
   }
 }
 
@@ -57,7 +57,7 @@ const DetailPage: NextPageWithLayout = () => {
   if (!post) return <CustomError />
 
   const image =
-    post.thumbnail || CONFIG.profile.image
+    post.thumbnail || config.profile.image
 
   const date = post.date?.start_date || post.createdTime || ""
 
@@ -67,7 +67,7 @@ const DetailPage: NextPageWithLayout = () => {
     image: image,
     description: post.summary || "",
     type: post.type[0],
-    url: `${CONFIG.link}/${post.slug}`,
+    url: `${config.link}/${post.slug}`,
   }
 
   return (

@@ -1,5 +1,5 @@
 import Feed from "src/routes/Feed"
-import { CONFIG } from "../../site.config"
+import config from "../../site.config"
 import { NextPageWithLayout } from "../types"
 import { getPosts } from "../apis"
 import MetaConfig from "src/components/MetaConfig"
@@ -17,16 +17,16 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: CONFIG.revalidateTime,
+    revalidate: config.revalidateTime,
   }
 }
 
 const FeedPage: NextPageWithLayout = () => {
   const meta = {
-    title: CONFIG.blog.title,
-    description: CONFIG.blog.description,
+    title: config.blog.title,
+    description: config.blog.description,
     type: "website",
-    url: CONFIG.link,
+    url: config.link,
   }
 
   return (

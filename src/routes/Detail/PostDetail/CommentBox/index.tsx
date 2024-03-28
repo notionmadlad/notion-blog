@@ -1,5 +1,5 @@
 import { TPost } from "src/types"
-import { CONFIG } from "site.config"
+import config from "site.config"
 import dynamic from "next/dynamic"
 
 const UtterancesComponent = dynamic(
@@ -16,7 +16,7 @@ type Props = {
 const CommentBox: React.FC<Props> = ({ data }) => {
   return (
     <div>
-      {CONFIG.utterances.enable && <UtterancesComponent issueTerm={data.id} />}
+      {config.utterances.enable && <UtterancesComponent issueTerm={data.id} />}
     </div>
   )
 }

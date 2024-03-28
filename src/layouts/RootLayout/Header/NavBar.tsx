@@ -1,9 +1,9 @@
 import styled from "@emotion/styled"
 import Link from "next/link"
-import { CONFIG } from "site.config"
+import config from "site.config"
 
 const NavBar: React.FC = () => {
-  const links = CONFIG.navLinks
+  const links = config.navLinks
   return (
     <StyledWrapper className="">
       <ul>

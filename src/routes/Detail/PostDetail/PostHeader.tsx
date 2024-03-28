@@ -1,4 +1,4 @@
-import { CONFIG } from "site.config"
+import config from "site.config"
 import Tag from "src/components/Tag"
 import { TPost } from "src/types"
 import { formatDate } from "src/libs/utils"
@@ -22,7 +22,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
                 <div className="author">
                   <Image
                     css={{ borderRadius: "50%" }}
-                    src={data.author[0].profile_photo || CONFIG.profile.image}
+                    src={data.author[0].profile_photo || config.profile.image}
                     alt="profile_photo"
                     width={24}
                     height={24}
@@ -36,7 +36,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             <div className="date">
               {formatDate(
                 data?.date?.start_date || data.createdTime,
-                CONFIG.lang
+                config.lang
               )}
             </div>
           </div>
