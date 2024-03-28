@@ -18,8 +18,8 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
-          <link rel="manifest" href="/manifest.webmanifest"></link>
-          <script async={true} src="https://arc.io/widget.min.js#vpckjHce"></script>
+          <link rel="manifest" href="/manifest.json"></link>
+          <script async src="https://arc.io/widget.min.js#vpckjHce"></script>
         </Head>
         <body>
           <Main />

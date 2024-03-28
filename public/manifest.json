@@ -36,12 +36,36 @@
     },
     {
       "src": "images/512.png",
-      "sizes": "512x512"
+      "sizes": "512x512",
       "purpose": "maskable"
     },
     {
       "src": "images/1024.png",
       "sizes": "1024x1024"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "images/512.png",
+          "sizes": "512x512",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Store",
+      "url": "https://gumroad.madlad.store",
+      "icons": [
+        {
+          "src": "images/512.png",
+          "sizes": "512x512",
+          "purpose": "maskable"
+        }
+      ]
     }
   ]
 }
