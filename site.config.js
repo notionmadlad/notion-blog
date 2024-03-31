@@ -11,6 +11,7 @@ const config = {
   profile: {
     name: "Notion Madlad",
     email: "martin.nicolai.online@gmail.com",
+    github: "notionmadlad",
     image: "/images/512.png"
   },
   utterances: {
@@ -22,7 +23,6 @@ const config = {
     },
   },
   notionPage: process.env.NOTION_PAGE_ID,
-  github: "notionmadlad",
   link: "https://blog.madlad.store",
   lang: "en-US",
   since: 2023,
