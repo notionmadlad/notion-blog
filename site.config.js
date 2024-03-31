@@ -22,6 +22,7 @@ const config = {
     },
   },
   notionPage: process.env.NOTION_PAGE_ID,
+  github: "notionmadlad",
   link: "https://blog.madlad.store",
   lang: "en-US",
   since: 2023,
