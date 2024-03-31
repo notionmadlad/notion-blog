@@ -5,11 +5,15 @@ import config from "site.config"
 const NavBar: React.FC = () => {
   const links = config.navLinks
   return (
-    <StyledWrapper className="">
+    <StyledWrapper>
       <ul>
         {Object.keys(links).map((link) => (
           <li key={link}>
-            <Link href={link}>{links[link]}</Link>
+            <Link 
+              href={links[link as keyof typeof links]}
+            >
+              {links[link as keyof typeof links]}
+            </Link>
           </li>
         ))}
       </ul>
