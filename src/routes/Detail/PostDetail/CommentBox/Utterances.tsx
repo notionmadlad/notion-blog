@@ -25,9 +25,9 @@ const Utterances: React.FC<Props> = ({ issueTerm }) => {
     script.setAttribute("async", `true`)
     script.setAttribute("issue-term", issueTerm)
     script.setAttribute("theme", theme)
-    const config: Record<string, string> = config.utterances.config
-    Object.keys(config).forEach((key) => {
-      script.setAttribute(key, config[key])
+    const _config: Record<string, string> = config.utterances.config
+    Object.keys(_config).forEach((key) => {
+      script.setAttribute(key, _config[key])
     })
     anchor.appendChild(script)
     return () => {
